@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import 'hammerjs';
 
+import {DishService} from './services/dish.service';
+
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
@@ -25,7 +27,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [DishService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

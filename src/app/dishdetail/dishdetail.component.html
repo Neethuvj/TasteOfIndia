@@ -36,10 +36,13 @@
               </md-card-title>
             </md-card-header>
 
-            <md-card-content *ngFor="let c of dish.comments; let i = index">
-              <p>{{dish.comments[i].comment}}</p>
-              {{dish.comments[i].rating}}
-              <p>{{dish.comments[i].author}}&nbsp;{{dish.comments[i].date | date }}</p>
+            <md-card-content *ngFor="let comment of dish.comments">
+              <p md-line>{{comment.comment}}</p>
+              <p md-line>{{comment.rating}}</p>
+              <p md-line>
+                <span>--{{comment.author}}&nbsp;{{comment.date | date }}-
+                  </span>
+                </p>
             </md-card-content>
           
           </md-card>
