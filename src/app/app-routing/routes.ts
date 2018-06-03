@@ -10,6 +10,7 @@ import { HOME } from '@angular/cdk';
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'menu',component: MenuComponent},
+    {path: 'about',component: AboutComponent},
     {path: 'contactus',component: ContactComponent},
     {path: 'dishdetail/:id',component: DishdetailComponent},
     {path: '',redirectTo: '/home',pathMatch:'full'}
