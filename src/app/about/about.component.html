@@ -57,10 +57,14 @@
         <div fxFlex>
           <md-list  *ngFor="let leader of leaders">
             
-            <img matListAvatar src="{{leader.image}}" alt="leader.name">
+            <img md-list-avatar src="{{leader.image}}" alt="leader.name">
             <md-list-item>{{leader.name}} </md-list-item>
             <md-list-item>{{leader.designation}}</md-list-item>
             <md-list-item>{{leader.description}}</md-list-item>
            </md-list>
        </div>
+
+       <div [hidden]="leaders">
+          <md-spinner></md-spinner><h4>Loading..... Please Wait</h4>
+        </div>
 </div>
