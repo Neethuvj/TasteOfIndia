@@ -28,6 +28,7 @@ import {LeaderService} from './services/leader.service';
 
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { LoginComponent } from './login/login.component';
+import { HghlightDirective } from './directives/hghlight.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { LoginComponent } from './login/login.component';
     AboutComponent,
     HomeComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    HghlightDirective
   ],
   imports: [
     BrowserModule,
