@@ -55,7 +55,7 @@
 
 
         <div fxFlex>
-          <md-list  *ngFor="let leader of leaders">
+          <md-list  *ngFor="let leader of leaders" [@expand]>
             
             <img md-list-avatar src="{{leader.image}}" alt="leader.name">
             <md-list-item>{{leader.name}} </md-list-item>
