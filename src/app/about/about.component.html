@@ -43,8 +43,8 @@
       <div fxFlex>
                 <md-card>
                     <blockquote>
-                        <h3>You better cut the pizza in four pieces because
-                            I'm not hungry enough to eat six.</h3>
+                        <h3>"You better cut the pizza in four pieces because
+                            I'm not hungry enough to eat six."</h3>
                         <footer>-- Yogi Berra,
                           <cite>The Wit and Wisdom of Yogi Berra,
                             P. Pepe, Diversion Books, 2014</cite>
@@ -55,16 +55,24 @@
 
 
         <div fxFlex>
-          <md-list  *ngFor="let leader of leaders" [@expand]>
+          <md-list  [@expand]>
+            <md-list-item  *ngFor="let leader of leaders">
             
-            <img md-list-avatar src="{{leader.image}}" alt="leader.name">
-            <md-list-item>{{leader.name}} </md-list-item>
-            <md-list-item>{{leader.designation}}</md-list-item>
-            <md-list-item>{{leader.description}}</md-list-item>
+            <img md-list-avatar src="{{BaseURL + leader.image}}" alt="leader.name">
+            <p md-line>{{leader.name}} </p>
+            <p md-line>{{leader.designation}}</p>
+            <p md-line>{{leader.description}}</p>
+            </md-list-item>
            </md-list>
        </div>
 
-       <div [hidden]="leaders">
-          <md-spinner></md-spinner><h4>Loading..... Please Wait</h4>
+      
+
+        <div [hidden]="leaders || leaderErrMes">
+          <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
+        </div>
+        <div *ngIf="leaderErrMes">
+          <h2>Error</h2>
+          <h4>{{errMess}}</h4>
         </div>
 </div>

@@ -41,7 +41,8 @@ export class DishdetailComponent implements OnInit {
 
   formErrors = {
     'author': '',
-    'comment': ''
+    'comment': '',
+    'rating': ''
   };
 
   validationMessages = {

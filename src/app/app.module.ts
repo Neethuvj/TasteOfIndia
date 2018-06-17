@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 
 import {DishService} from './services/dish.service';
+import {FeedbackService} from './services/feedback.service';
 import { ProcessHTTPMsgService} from './services/process-httpmsg.service';
 import {PromotionService} from './services/promotion.service';
 import {LeaderService} from './services/leader.service';
@@ -56,6 +57,7 @@ import { HghlightDirective } from './directives/hghlight.directive';
   ],
   providers: [DishService,
     PromotionService,
+    FeedbackService,
     LeaderService, ProcessHTTPMsgService, {provide: 'BaseURL', useValue: baseURL}],
     entryComponents: [LoginComponent],
   bootstrap: [AppComponent]

@@ -1,9 +1,7 @@
 import { Component, OnInit,Inject } from '@angular/core';
-
 import {Dish} from '../shared/dish';
 import {Leader} from '../shared/leader';
 import {DishService} from '../services/dish.service';
-
 import {Promotion} from '../shared/promotion';
 import {PromotionService} from '../services/promotion.service';
 import { LeaderService } from '../services/leader.service';
@@ -30,6 +28,8 @@ export class HomeComponent implements OnInit {
   promotion: Promotion;
   leader: Leader;
   dishErrMess: string;
+  leaderErrMess: string;
+  promotionErrMess: string;
 
   constructor(private dishService: DishService,
     private promotionService: PromotionService,
@@ -41,10 +41,12 @@ export class HomeComponent implements OnInit {
       errmess => this.dishErrMess = <any>errmess
     );
     this.promotionService.getFeaturedPromotion().subscribe(
-      promotion =>  this.promotion = promotion 
+      promotion =>  this.promotion = promotion,
+      errmess => this.promotionErrMess = <any>errmess 
     );
     this.leaderService.getFeaturedLeader().subscribe(
-      leader =>  this.leader = leader
+      leader =>  this.leader = leader,
+      errmess => this.leaderErrMess = <any>errmess
     );
   
    }
