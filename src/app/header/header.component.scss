@@ -1,8 +1,11 @@
 $lt-gray: #ddd;
-$background-dark: #512DA8;
+$background-dark:#228B22;
 $background-light: #9575CD;
 $background-moredark: #4527A0;
 $background-pale: #D1C4E9;
+$background-lime-green: #32CD32;
+$background-orange:	#FFA500;
+$background-green:#195d24;
 
 @mixin zero-margin($pad-up-down, $pad-left-right) {
     margin: 0px auto;
@@ -11,12 +14,22 @@ $background-pale: #D1C4E9;
 
 .jumbotron {
     @include zero-margin(70px,30px);
-    background: $background-light;
+    background: $background-lime-green;
     color:floralwhite;
     min-height: 150px;
 }
 
+.green{
+    background: $background-green;
+}
+
 .active {
 
-background: $background-moredark;
+background: $background-orange;
+}
+
+.fontstyle {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
